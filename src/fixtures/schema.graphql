@@ -1,0 +1,20 @@
+type Query {
+	a: String
+	b: String
+	c: String
+
+	auth: Auth
+}
+
+type Auth {
+	sensitive: String!
+		@deprecated(reason: "(multiple directives)")
+		@auth(requires: ADMIN)
+}
+
+# https://www.apollographql.com/blog/graphql/directives/eusable-graphql-schema-directives/
+directive @auth(requires: Role = ADMIN) on OBJECT | FIELD_DEFINITION
+
+enum Role {
+	ADMIN
+}

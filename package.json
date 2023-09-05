@@ -1,0 +1,31 @@
+{
+	"name": "graphql-visit",
+	"version": "0.0.0",
+	"type": "module",
+	"author": "Tim Hall <tim@timhall.dev>",
+	"license": "MIT",
+	"description": "Execute a GraphQL visitor",
+	"keywords": [
+		"graphql",
+		"visitor"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"format": "prettier --write ."
+	},
+	"bin": {
+		"graphql-visit": "bin/graphql-visit.js"
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3"
+	},
+	"dependencies": {
+		"@timhall/cli": "^0.5.0",
+		"graphql": "^16.8.0",
+		"graphql-config": "^5.0.2",
+		"mri": "^1.2.0"
+	},
+	"files": [
+		"bin"
+	]
+}
